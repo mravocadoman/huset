@@ -1,14 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Montserrat');
+
 body{
-    background-color:#edf8fe
+    background-color:#edf8fe;
+    margin:0;
 }
 
+#logo{
+    height: 100px;
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+button{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    background-color:#df0d0b;
+    color:white;
+    height:35px;
+    width:110px;
+    font-family: 'Montserrat', sans-serif;
+    padding:0;
+    border-width:0;
+}
+
+.hidden {
+    display:none;
+}
 p{
-    color:#717175
+    color:#717175;
+    font-family: 'Dosis', sans-serif;
 }
 
 h1{
     text-transform:uppercase;
     text-align:center;
+}
+
+h2{
+    font-size:1em;
+}
+
+h1, h2, h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h1{
+    text-transform:uppercase;
+    text-align:center;
+    font-size: 1.2em;
+    margin-top:0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #nav{
@@ -20,7 +65,7 @@ h1{
 }
 
 #nav2{
-    padding:15px;
+    padding-top:15px;
 }
 
 .gamelist{
@@ -29,15 +74,49 @@ h1{
 }
 
 .container {
-    border: 1px solid #000;
+    margin:1em;
     padding: 1.5em;
     max-width:400px;
+    background: white;
+    
 }
 
 #nav a{
-    padding:15px;
+    padding:10px;
+    padding-top:15px;
     text-decoration:none;
     color:white;
-    font-size:1.2em;
+    font-size:1em;
     text-transform:uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.time{
+    float:right;
+    display:inline;
+}
+
+img{
+    width:100%;
+   
+}
+
+.picturex{
+    position:relative;
+}
+
+.price{
+    position:absolute;
+    background-color:white;
+    padding:6px;
+    color:#df0d0b;
+    right:0;
+    top:0;
+    margin:0;
+    text-align:right;
+}
+
+   
 }

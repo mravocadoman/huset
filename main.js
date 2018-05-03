@@ -26,6 +26,7 @@ function showList(data){
 //looping//
     lookingForData=false;
     data.forEach(showSingleGame)
+   // setupReadMore()
 }
 
 function showSingleGame(aGame){
@@ -42,6 +43,8 @@ function showSingleGame(aGame){
          clone.querySelector("img").remove()                            
     }
     
+    //clone.querySelector('.readmore').href="subpage.html?id=" + aGame.id;
+    
     if(aGame.acf.date){
     let year = aGame.acf.date.substring(0, 4);
     let month = aGame.acf.date.substring(4, 6);
@@ -52,10 +55,24 @@ function showSingleGame(aGame){
     else{  
     }
     
+    if(aGame.acf.price==0){
+        clone.querySelector(".price span").textContent = "FREE";
+        clone.querySelector("h2").textContent = "FREE";
+    }
+    let button =
+    clone.querySelector('.readmore');
+    button.addEventListener('click', ()=>{
+            button.nextElementSibling.classList.toggle('hidden')
+        })
+    
     let gamelist = document.querySelector("#gamelist")
     gamelist.appendChild(clone);
     
 }
+
+
+    
+
 
 //if we are at bottom/
 setInterval(function(){
@@ -70,7 +87,7 @@ function bottomVisible() {
     const scrollY = window.scrollY
     const visible = document.documentElement.clientHeight
     const pageHeight = document.documentElement.scrollHeight
-    const bottomOfPage = visible + scrollY >= pageHeight
+    const bottomOfPage = visible + scrollY >= pageHeight-20
     return bottomOfPage || pageHeight < visible
 }
 
